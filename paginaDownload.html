@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descargar Benny Rush</title>
+    <style>
+        body{
+            background: rgb(1, 25, 71);
+        }
+
+        .boton{
+            height: 20vw;
+            width: 60vw;
+            position: absolute;
+            left: 20vw;
+            bottom: 2vw;
+            background: url("img/playstore.png");
+            background-repeat: no-repeat;
+            background-size:  contain;
+            border: none;
+
+            font-size: 26px;
+            color: rgb(1, 25, 71);            
+        }
+
+        .txt{
+            text-align: center;
+            font-size: 1vw;
+            color: #ffd900;
+            font-family: Helvetica;
+        }
+    </style>
+</head>
+<body>
+    <div class="txt"><h1>Descargar Benny Rush</h1></div>
+    <button class="boton" onclick="Boton()"></button>
+
+<script>
+
+if(document.readyState === "complete" || document.readyState === "interactive"){
+    setTimeout(Init, 1);
+}else{
+    document.addEventListener("DOMContentLoaded", Init); 
+}
+function Init(){
+    if (esIOS()){
+        document.querySelector(".boton").style.background = "#ffd900";
+        document.querySelector(".boton").style.borderRadius = "15%";
+        document.querySelector(".boton").innerText = "Descargar";
+    }
+}
+function esIOS() {
+    return (
+        (navigator.userAgent.match(/iPhone/i)) ||
+        (navigator.userAgent.match(/iPod/i)) ||
+        (navigator.userAgent.match(/iPad/i))
+    );
+}
+
+function Boton(){
+    if (esIOS());
+    else window.location.replace("https://play.google.com/store/apps/details?id=com.btgames.bennyRush" );
+}
+</script>
+</body>
+</html>
