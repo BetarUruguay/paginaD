@@ -62,7 +62,7 @@ if(document.readyState === "complete" || document.readyState === "interactive"){
     document.addEventListener("DOMContentLoaded", Init); 
 }
 function Init(){
-    if (esIOS()){
+    if (!esIOS()){
         document.querySelector(".boton").style.background = "#ffd900";
         document.querySelector(".boton").style.borderRadius = "15%";
         document.querySelector(".boton").innerText = "Descargar";
