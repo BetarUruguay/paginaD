@@ -62,10 +62,10 @@ if(document.readyState === "complete" || document.readyState === "interactive"){
     document.addEventListener("DOMContentLoaded", Init); 
 }
 function Init(){
-    if (!esIOS()){
+    if (esIOS()){
         document.querySelector(".boton").removeAttribute("background");
         document.querySelector(".boton").style.background = "#ffd900";
-        document.querySelector(".boton").style.borderRadius = "7%";
+        document.querySelector(".boton").style.borderRadius = "9%";
         document.querySelector(".boton").innerText = "DESCARGAR";
     }
 }
