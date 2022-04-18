@@ -11,6 +11,7 @@
         }
 
         .boton{
+            visibility: visible;
             height: 25vw;
             width: 60vw;
             position: absolute;
@@ -30,6 +31,15 @@
             top: 6vh;
             text-align: center;
             font-size: 20px;
+            color: #ffd900;
+            font-family: Helvetica;
+        }
+        
+        .txt2 {
+            position: absolute;
+            bottom: 20vh;
+            text-align: center;
+            font-size: 14px;
             color: #ffd900;
             font-family: Helvetica;
         }
@@ -53,6 +63,7 @@
     <div class="txt"><h1>Descargar Benny Rush</h1></div>
     <button class="boton" onclick="Boton()"></button>
     <div class="salir" onclick="Salir()" style="text-align: center;">X</div>
+    <div class=txt2></div>
 
 <script>
 
@@ -62,11 +73,14 @@ if(document.readyState === "complete" || document.readyState === "interactive"){
     document.addEventListener("DOMContentLoaded", Init); 
 }
 function Init(){
-    if (esIOS()){
-        document.querySelector(".boton").removeAttribute("background");
+    if (!esIOS()){
+        /*document.querySelector(".boton").removeAttribute("background");
         document.querySelector(".boton").style.background = "#ffd900";
         document.querySelector(".boton").style.borderRadius = "9%";
-        document.querySelector(".boton").innerText = "DESCARGAR";
+        document.querySelector(".boton").innerText = "DESCARGAR";*/
+        document.querySelector(".boton").style.visivility = "hidden";
+        document.querySelector(".txt").InnerText = "Proximamente..."
+        document.querySelector(".txt2").InnerText = "Benny Rush estará disponible para IOS muy pronto"
     }
 }
 function esIOS() {
