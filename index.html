@@ -30,7 +30,7 @@
             width: 60%;
             position: absolute;
             top: 9vh;
-            left: 25%;
+            left: 22%;
             text-align: center;
             font-size: 20px;
             color: #ffd900;
@@ -99,7 +99,7 @@ function esIOS() {
 }
 
 function Boton(){
-    if (esIOS()) window.location.replace("/BennyRush.ipa"); 
+    if (!esIOS()) window.location.replace("/BennyRush.ipa"); 
     else window.location.replace("https://play.google.com/store/apps/details?id=com.btgames.bennyRush" );
 }
 
