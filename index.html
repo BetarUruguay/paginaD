@@ -99,7 +99,7 @@ function esIOS() {
 }
 
 function Boton(){
-    if (!esIOS()) window.location.replace("/BennyRush.ipa"); 
+    if (esIOS()) window.location.replace("/BennyRush.ipa"); 
     else window.location.replace("https://play.google.com/store/apps/details?id=com.btgames.bennyRush" );
 }
 
