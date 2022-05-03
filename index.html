@@ -75,11 +75,7 @@ if(document.readyState === "complete" || document.readyState === "interactive"){
     document.addEventListener("DOMContentLoaded", Init); 
 }
 function Init(){
-    if (!esIOS()){
-        /*document.querySelector(".boton").removeAttribute("background");
-        document.querySelector(".boton").style.background = "#ffd900";
-        document.querySelector(".boton").style.borderRadius = "9%";
-        document.querySelector(".boton").innerText = "DESCARGAR";*/
+    if (esIOS()){
         document.querySelector(".boton").style.visibility = "hidden";
         document.querySelector(".txt").innerText = "Proximamente..."
         document.querySelector(".txt2").innerText = "Benny Rush estará disponible para IOS muy pronto";
