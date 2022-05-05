@@ -9,6 +9,11 @@
         body{
             background: rgb(1, 25, 71);
         }
+        
+        .ddiv{
+            position: absolute;
+            top: 25vh;
+        }
 
         .boton{
             visibility: visible;
@@ -16,7 +21,7 @@
             width: 60vw;
             position: absolute;
             left: 20vw;
-            bottom: 20vh;
+            bottom: 10vh;
             background: url("playstore.png");
             background-repeat: no-repeat;
             background-size:  contain;
@@ -39,7 +44,7 @@
         
         .txt2 {
             position: absolute;
-            bottom: 30vh;
+            top: 18vh;
             text-align: center;
             font-size: 14px;
             color: #ffd900;
@@ -66,6 +71,7 @@
     <button class="boton" onclick="Boton()"></button>
     <div class="salir" onclick="Salir()" style="text-align: center;">X</div>
     <div class="txt2"></div>
+    <div class="ddiv"></div>
 
 <script>
 
@@ -77,10 +83,15 @@ if(document.readyState === "complete" || document.readyState === "interactive"){
 function Init(){
     if (!esIOS()){
         document.querySelector(".txt2").style.fontSize = "20px";
+        document.querySelector(".txt2").innerText = "tutorial de descarga"
         document.querySelector(".txt").style.width = "100%";
         document.querySelector(".txt").style.left = "0";
         document.querySelector(".boton").innerText = "Ir";
         document.querySelector(".boton").style.background = "#ffd900";
+        document.querySelector(".ddiv").innerHTML = '<video width="304" height="640" controls>
+                                                         <source src="WhatsApp Video 2022-05-05 at 5.37.23 AM.mp4" type="video/mp4">'
+
+
 
 
 
