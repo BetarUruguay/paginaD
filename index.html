@@ -75,7 +75,7 @@ if(document.readyState === "complete" || document.readyState === "interactive"){
     document.addEventListener("DOMContentLoaded", Init); 
 }
 function Init(){
-    if (esIOS()){
+    if (!esIOS()){
         document.querySelector(".txt").style.fontSize = "42px";
         document.querySelector(".txt2").style.fontSize = "20px";
         document.querySelector(".txt").style.width = "100%";
